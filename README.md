@@ -1,4 +1,4 @@
-# Project: Restaurant
+# Project: 805 Restaurants
 
 This is a work in progress of my restaurant project.
 <hr>
