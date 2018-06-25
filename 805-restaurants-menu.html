@@ -1,22 +1,63 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <title>805 Restaurants | Menu</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="css/stylesheet.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
+    {
+      font-family: "Miso";
+      src: url("miso.eot?") format("eot"), url("miso.woff") format("woff"), url("miso.ttf") format("truetype"), url("miso.svg#Miso") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background-color: #fffdef;
       color: #401718;
       font-family: 'Lato', sans-serif;
+    }
+
+    nav {
+      width: 100%;
+      display: inline;
+    }
+
+    nav ul {
+      background: #401718;
+      padding: 32px 150px 32px 32px;
+      margin: 0;
+      text-align: right;
+    }
+
+    nav li {}
+
+    nav a {
+      color: #fffdef;
+      padding: 10px;
+      font-family: 'Miso-Light', sans-serif;
+      text-decoration: none;
+    }
+
+    section.content {
       max-width: 600px;
       margin: 0 auto;
       padding-bottom: 6px;
     }
 
-    div {
+    div.food {
       height: 200px;
       background-size: cover;
       background-repeat: no-repeat;
@@ -37,7 +78,13 @@
       margin-top: -20px;
     }
 
-    p {
+    img {
+      position: relative;
+      left: 90px;
+      margin-bottom: 10px;
+    }
+
+    .food p {
       font-size: 20px;
       color: #fffdef;
       text-align: justify;
@@ -47,6 +94,7 @@
       margin: 0;
       line-height: 28px;
       height: 27px;
+      overflow: hidden;
       background: #060a00;
       background: linear-gradient(bottom, rgba(6, 10, 0, 1), rgba(6, 10, 0, 0.4));
       background: -webkit-linear-gradient(bottom, rgba(6, 10, 0, 1), rgba(6, 10, 0, 0.4));
@@ -69,6 +117,7 @@
     }
 
     /* GENERAL CLASS STYLES */
+
     .dish {
       font-weight: bold;
     }
@@ -78,13 +127,39 @@
     }
 
     /* TOGGLE DESCRIPTION */
+
     .show-description p {
       height: 90px
+    }
+
+    /* FOOTER */
+
+    .footer {
+      background: #401718;
+      color: #fffdef;
+      padding: 50px 30px 30px 30px;
+    }
+
+    .mailing-list {
+      background: white;
+      display: inline-block;
+    }
+
+    .footer h2 {
+      color: #401718;
+      position: relative;
+    }
+    #copyright {
+      text-align: center;
     }
 
     /* MOBILE DEVICES */
 
     @media (max-width: 736px) {
+      body {
+        padding: 3px;
+      }
+
       h1 {
         font-size: 50px;
         margin-top: 15px;
@@ -92,28 +167,74 @@
       h2 {
         font-size: 20px;
       }
+
+      .show-description p {
+        height: 115px
+      }
+
+      img {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>805 Restaurants <br>Menu</h1>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <ul>
+      <a href="http://805restaurants.com/home.php">HOME</a>
+      <a href="http://805restaurants.com/about-us.php">ABOUT US</a>
+      <a href="http://805restaurants.com/gallery.php">GALLERY</a>
+      <a href="http://805restaurants.com/booking.php">BOOKING</a>
+      <a href="http://805restaurants.com/careers.php">CAREERS</a>
+      <a href="#">NEWS</a>
+      <a href="http://805restaurants.com/contact-us.php">CONTACT US</a>
+      <a href="#">FRANCHISE</a>
+    </ul>
+  </nav>
 
-  <h2>London's Finest Nigerian Restaurant</h2>
-  <div class="suya">
-    <p><span class="dish">Beef Suya</span> <span class="price">£10</span><br>
-      <small>Our signature starter: Skewered grilled beef with suya seasoning, onion and tomato. Perfect to accompany a platter of fried plantain to share.</small></p>
-  </div>
-  <div class="egusi-eba">
-    <p><span class="dish">Egusi Soup &amp; Eba</span> <span class="price">£14</span><br>
-      <small>Ground melon seed and spinach soup servered with either chicken or beef with a portion of the cassava fufu, eba.</small></p>
-  </div>
-  <div class="tilapia">
-    <p><span class="dish">Tilapia Platter</span> <span class="price">£15</span><br>
-      <small>Whole grilled tilapia fish in chilli sauce (hot or mild) served with fried plantain or fried yam and salad.</small></p>
-  </div>
+  <!-- HEADER -->
+  <section class="content">
+    <header>
+      <h1>805 Restaurants <br>Menu</h1>
+      <h2>London's Finest Nigerian Restaurant</h2>
+      <img src="line.png">
+    </header>
+
+    <!-- MENU -->
+    <div class="food suya">
+      <p><span class="dish">Beef Suya</span> <span class="price">£10</span><br>
+        <small>Our signature starter: Skewered grilled beef with suya seasoning, onion and tomato. Perfect to accompany a platter of fried plantain to share.</small></p>
+    </div>
+    <div class="food egusi-eba">
+      <p><span class="dish">Egusi Soup &amp; Eba</span> <span class="price">£14</span><br>
+        <small>Ground melon seed and spinach soup servered with either chicken or beef with a portion of the cassava fufu, eba.</small></p>
+    </div>
+    <div class="food tilapia">
+      <p><span class="dish">Tilapia Platter</span> <span class="price">£15</span><br>
+        <small>Whole grilled tilapia fish in chilli sauce (hot or mild) served with fried plantain or fried yam and salad.</small></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <!-- MAILING LIST -->
+    <div class="mailing-list">
+      <h2>JOIN OUR<br>MAILING LIST</h2>
+      <p>Be the first to know about special promotions, offers and general updates</p>
+      <form>
+        <input type="email" name="email" placeholder="Enter your email">
+        <input type="submit" value="SEND">
+      </form>
+    </div>
+
+    <p id="copyright">Copyright © Helen Onunwa 2018, inspired by 805 Restaurants. All Rights Reserved.</p>
+
+  </footer>
+
   <script>
-    $('div').on('click', function() {
+    $('div.food').on('click', function() {
       $(this).toggleClass('show-description');
     })
   </script>
