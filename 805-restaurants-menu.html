@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <title>805 Restaurants | Menu</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <style>
     body {
@@ -20,7 +21,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      border-radius: 10px;
+      /*border-radius: 10px;*/
       margin: 10px;
       position: relative;
     }
@@ -31,6 +32,7 @@
       font-size: 70px;
       /* I want this to be bolder */
     }
+
     h2 {
       text-align: center;
       margin-top: -20px;
@@ -42,16 +44,18 @@
       text-align: justify;
       position: absolute;
       bottom: 0;
-      padding: 10px;
+      padding: 5px 10px 10px 10px;
       margin: 0;
+      line-height: 28px;
+      height: 27px;
       background: #060a00;
       background: linear-gradient(bottom, rgba(6, 10, 0, 1), rgba(6, 10, 0, 0.4));
       background: -webkit-linear-gradient(bottom, rgba(6, 10, 0, 1), rgba(6, 10, 0, 0.4));
       background: -moz-linear-gradient(bottom, rgba(6, 10, 0, 1), rgba(6, 10, 0, 0.4));
+      transition: height 1s;
     }
 
     /* DISH BACKGROUND */
-
     .suya {
       background-image: url('suya.jpg');
     }
@@ -65,13 +69,28 @@
     }
 
     /* GENERAL CLASS STYLES */
-
     .dish {
       font-weight: bold;
     }
 
     .price {
       float: right;
+    }
+
+    /* TOGGLE DESCRIPTION */
+    .show-description p {
+      height: auto;
+    }
+
+    /* MOBILE DEVICES */
+    @media (max-width: 736px) {
+      h1 {
+        font-size: 50px;
+        margin-top: 15px;
+      }
+      h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -89,9 +108,14 @@
       <small>Ground melon seed and spinach soup servered with either chicken or beef with a portion of the cassava fufu, eba. This main course is held dear to the hearts of all Nigerians.</small></p>
   </div>
   <div class="tilapia">
-    <p><span class="dish">Mixed Grill</span> <span class="price">£15</span><br>
-      <small>A medley of chicken, beef and lamb served with jollof rice or fried rice and salad. If you you're feeling a bit indecisive, this is the perfect dish for you!</small></p>
+    <p><span class="dish">Tilapia Platter</span> <span class="price">£15</span><br>
+      <small>Whole grilled tilapia fish in chilli sauce (hot or mild) served with fried plantain or fried yam and salad.</small></p>
   </div>
+  <script>
+$('div').on('click', function() {
+$(this).toggleClass('show-description');
+})
+  </script>
 </body>
 
 </html>
