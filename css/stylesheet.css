@@ -25,10 +25,19 @@ nav ul {
 
 nav li {}
 
+/* FONT FOR NAV */
+
+@font-face {
+  font-family: "Miso";
+  src: url("font-css/miso.eot?") format("eot"), url("font-css/miso.woff") format("woff"), url("font-css/miso.ttf") format("truetype"), url("font-css/miso.svg#Miso") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 nav a {
   color: #fffdef;
   padding: 10px;
-  font-family: 'Miso', sans-serif;
+  font-family: 'Miso';
   text-decoration: none;
 }
 
@@ -119,11 +128,25 @@ img {
   background: #401718;
   color: #fffdef;
   padding: 50px 30px 30px 30px;
+  font-size: 20px;
 }
 
 .mailing-list {
   background: white;
+  padding: 25px;
   display: inline-block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.mailing-list div {
+  display: inline-block;
+}
+
+.mailing-list h2 {
+  position: absolute;
+  text-align: left;
+  top: 20px;
 }
 
 .footer h2 {
@@ -131,13 +154,25 @@ img {
   position: relative;
 }
 
+.mailing-list p {
+  color: #401718;
+  max-width: 300px;
+  margin: 20px;
+}
+
+input[type="email"] {
+  padding: 15px;
+}
+
 input[type="submit"] {
   background: #401718;
   color: white;
+  padding: 15px;
 }
 
 #copyright {
   text-align: center;
+  font-size: 16px;
 }
 
 /* MOBILE DEVICES */
