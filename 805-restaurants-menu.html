@@ -3,64 +3,93 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>805 Restaurants | Menu</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link href="css/stylesheet.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <!-- css -->
+  <link href="css/stylesheet-bs.css" rel="stylesheet">
+  <!-- nav-font -->
   <link href="font-css/font-stylesheet.css" rel="stylesheet">
+  <!-- font -->
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- icons -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 
 </head>
 
 <body>
   <!-- NAVIGATION BAR -->
-  <nav>
-    <ul>
-      <a href="http://805restaurants.com/home.php">HOME</a>
-      <a href="http://805restaurants.com/about-us.php">ABOUT US</a>
-      <a href="http://805restaurants.com/gallery.php">GALLERY</a>
-      <a href="http://805restaurants.com/booking.php">BOOKING</a>
-      <a href="http://805restaurants.com/careers.php">CAREERS</a>
-      <a href="#">NEWS</a>
-      <a href="http://805restaurants.com/contact-us.php">CONTACT US</a>
-      <a href="#">FRANCHISE</a>
+  <nav id="navigation">
+    <ul id="nav-items" class="nav nav-pills">
+      <li class="active"><a href="http://805restaurants.com/home.php">HOME</a></li>
+      <li><a href="http://805restaurants.com/about-us.php">ABOUT US</a></li>
+      <li><a href="http://805restaurants.com/gallery.php">GALLERY</a></li>
+      <li><a href="http://805restaurants.com/booking.php">BOOKING</a></li>
+      <li><a href="http://805restaurants.com/careers.php">CAREERS</a></li>
+      <li><a href="#">NEWS</a></li>
+      <li><a href="http://805restaurants.com/contact-us.php">CONTACT US</a></li>
+      <li><a href="#">FRANCHISE</a></li>
     </ul>
   </nav>
 
   <!-- HEADER -->
-  <section class="content">
-    <header>
-      <h1>805 Restaurants <br>Menu</h1>
-      <h2>London's Finest Nigerian Restaurant</h2>
-      <img src="img/line.png">
-    </header>
+  <div id="header" class="container text-center">
+    <h1>805 Restaurants <br>Menu</h1>
+    <h2>London's Finest Nigerian Restaurant</h2>
+    <img src="img/line.png">
+  </div>
 
-    <!-- MENU -->
-    <div class="food suya">
-      <p><span class="dish">Beef Suya</span> <span class="price">£10</span><br>
-        <small>Our signature starter: Skewered grilled beef with suya seasoning, onion and tomato. Perfect to accompany a platter of fried plantain to share.</small></p>
-    </div>
-    <div class="food egusi-eba">
-      <p><span class="dish">Egusi Soup &amp; Eba</span> <span class="price">£14</span><br>
-        <small>Ground melon seed and spinach soup servered with either chicken or beef with a portion of the cassava fufu, eba.</small></p>
-    </div>
-    <div class="food tilapia">
-      <p><span class="dish">Tilapia Platter</span> <span class="price">£15</span><br>
-        <small>Whole grilled tilapia fish in chilli sauce (hot or mild) served with fried plantain or fried yam and salad.</small></p>
-    </div>
-  </section>
+  <!-- MENU (SCROLLSPY) -->
+  <div id="menu" class="container">
+    <nav id="menu-scrollspy" class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="http://805restaurants.com/home.php">805 restaurants</a>
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link" href="#appetisers">Appetisers</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ml-3 my-1" href="#item-1-1">Item 1-1</a>
+          <a class="nav-link ml-3 my-1" href="#item-1-2">Item 1-2</a>
+        </nav>
+        <a class="nav-link" href="#main-courses">Main Courses</a>
+        <a class="nav-link" href="#item-3">Item3</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
+          <a class="nav-link ml-3 my-1" href="#item-3-2">Item 3-2</a>
+        </nav>
+      </nav>
+    </nav>
 
-  <footer class="footer">
+    <div data-spy="scroll" data-target="#menu-scrollspy" data-offset="0">
+      <h4 id="appetisers">Apperisers</h4>
+      <p>So many appetisers</p>
+      <h5 id="item-1-1">Item 1-1</h5>
+      <p>...</p>
+      <h5 id="item-1-2">Item 2-2</h5>
+      <p>...</p>
+      <h4 id="main-courses">Main Courses</h4>
+      <p>So many main courses</p>
+      <h4 id="item-3">Item 3</h4>
+      <p>...</p>
+      <h5 id="item-3-1">Item 3-1</h5>
+      <p>...</p>
+      <h5 id="item-3-2">Item 3-2</h5>
+      <p>...</p>
+    </div>
+  </div>
 
+  <!-- FOOTER -->
+  <div id="footer" class="container-fluid">
     <!-- MAILING LIST -->
-    <div class="mailing-list">
-      <div>
-        <h2>JOIN OUR<br>MAILING LIST</h2>
+    <div id="mailing-list" class="container row">
+      <div class="col-sm-4">
+        <h2>JOIN OUR MAILING LIST</h2>
       </div>
-      <div>
+      <div class="col-sm-4">
         <p>Be the first to know about special promotions, offers and general updates</p>
       </div>
-      <div>
+      <div class="col-sm-4">
         <form>
           <input type="email" name="email" placeholder="Enter your email">
           <input type="submit" value="SEND">
@@ -68,15 +97,10 @@
       </div>
     </div>
 
-    <p id="copyright">Copyright © Helen Onunwa 2018, inspired by 805 Restaurants. All Rights Reserved.</p>
+    <div id='social-buttons'>
+      <button class='btn-twitter btn-lg'>Twitter</button>
+      <button class='btn-facebook btn-lg'>Facebook</button>
+      <button class='btn-pinterest btn-lg'>Pinterest</button>
+    </div>
 
-  </footer>
-
-  <script>
-    $('div.food').on('click', function() {
-      $(this).toggleClass('show-description');
-    })
-  </script>
-</body>
-
-</html>
+  </div>
