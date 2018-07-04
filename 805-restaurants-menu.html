@@ -7,8 +7,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="css/stylesheet.css" rel="stylesheet">
   <link href="font-css/font-stylesheet.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 
 </head>
 
@@ -16,14 +17,14 @@
   <!-- NAVIGATION BAR -->
   <nav>
     <ul>
-      <a href="http://805restaurants.com/home.php">HOME</a>
-      <a href="http://805restaurants.com/about-us.php">ABOUT US</a>
-      <a href="http://805restaurants.com/gallery.php">GALLERY</a>
-      <a href="http://805restaurants.com/booking.php">BOOKING</a>
-      <a href="http://805restaurants.com/careers.php">CAREERS</a>
-      <a href="#">NEWS</a>
-      <a href="http://805restaurants.com/contact-us.php">CONTACT US</a>
-      <a href="#">FRANCHISE</a>
+      <li><a href="http://805restaurants.com/home.php">HOME</a></li>
+      <li><a href="http://805restaurants.com/about-us.php">ABOUT US</a></li>
+      <li><a href="http://805restaurants.com/gallery.php">GALLERY</a></li>
+      <li><a href="http://805restaurants.com/booking.php">BOOKING</a></li>
+      <li><a href="http://805restaurants.com/careers.php">CAREERS</a></li>
+      <li><a href="#">NEWS</a></li>
+      <li><a href="http://805restaurants.com/contact-us.php">CONTACT US</a></li>
+      <li><a href="#">FRANCHISE</a></li>
     </ul>
   </nav>
 
@@ -50,28 +51,37 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
+    <div id="footer-inner" class="flex-container">
 
-    <!-- MAILING LIST -->
-    <div class="mailing-list">
-      <div>
+      <!-- MAILING LIST -->
+      <div class="footer-section">
         <h2>JOIN OUR<br>MAILING LIST</h2>
       </div>
-      <div>
+      <div class="footer-section">
         <p>Be the first to know about special promotions, offers and general updates</p>
       </div>
-      <div>
+      <div class="footer-section">
         <form>
           <input type="email" name="email" placeholder="Enter your email">
           <input type="submit" value="SEND">
         </form>
       </div>
+      <!-- SOCIAL MEDIA -->
+      <div id="social-media" class="footer-section">
+        <i class="fa fa-twitter fa-2x"></i>
+        <i class="fa fa-facebook-official fa-2x"></i>
+        <i class="fa fa-envelope fa-2x"></i>
+      </div>
+
     </div>
 
     <p id="copyright">Copyright © Helen Onunwa 2018, inspired by 805 Restaurants. All Rights Reserved.</p>
 
   </footer>
 
+  <!-- JAVASCRIPT -->
   <script>
     $('div.food').on('click', function() {
       $(this).toggleClass('show-description');
