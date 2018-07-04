@@ -18,12 +18,14 @@ nav {
 
 nav ul {
   background: #401718;
-  padding: 32px 150px 32px 32px;
+  padding: 32px 130px 32px 32px;
   margin: 0;
   text-align: right;
 }
 
-nav li {}
+nav li {
+  display: inline-block;
+}
 
 /* FONT FOR NAV */
 
@@ -126,53 +128,53 @@ img {
 
 .footer {
   background: #401718;
-  color: #fffdef;
-  padding: 50px 30px 30px 30px;
+  color: white;
+  padding: 30px;
   font-size: 20px;
 }
 
-.mailing-list {
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#footer-inner {
   background: white;
-  padding: 25px;
-  display: inline-block;
-  position: relative;
-  margin: 0 auto;
-}
-
-.mailing-list div {
-  display: inline-block;
-}
-
-.mailing-list h2 {
-  position: absolute;
-  text-align: left;
-  top: 20px;
-}
-
-.footer h2 {
   color: #401718;
-  position: relative;
+  align-items: baseline;
 }
 
-.mailing-list p {
-  color: #401718;
-  max-width: 300px;
-  margin: 20px;
+#footer-inner h2 {
+  line-height: 30px;
+}
+
+#footer-inner p {
+  /*max-width: 150px;*/
+  font-size: 17px;
+}
+
+form {
+  display: inline-block;
+  top: 35px;
 }
 
 input[type="email"] {
   padding: 15px;
+  font-size: 20px;
 }
 
 input[type="submit"] {
   background: #401718;
+  /*button*/
   color: white;
   padding: 15px;
+  font-size: 20px;
 }
 
 #copyright {
   text-align: center;
   font-size: 16px;
+  margin-top: 40px;
 }
 
 /* MOBILE DEVICES */
