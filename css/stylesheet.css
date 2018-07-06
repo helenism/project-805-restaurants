@@ -140,7 +140,7 @@ img {
 /* TOGGLE DESCRIPTION */
 
 .show-description p {
-  height: 95px
+  height: 120px
 }
 
 /* FOOTER */
@@ -242,6 +242,6 @@ i {
 @media (max-width: 565px) {
   /*Make .show-description p height higher*/
   .show-description p {
-    height: 100px;
+    height: 10px;
   }
 }
